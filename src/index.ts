@@ -17,11 +17,15 @@ export class TurboNumber {
   result() {
     return this.number;
   }
+
+  static new(x: number) {
+    return new TurboNumber(x);
+  }
 }
 
 export const turboNumber = new TurboNumber(10);
 
-console.log(turboNumber.divide(0));
+console.log();
 console.log(turboNumber.result());
 console.log(turboNumber.subtract(2));
 console.log(turboNumber.result());
