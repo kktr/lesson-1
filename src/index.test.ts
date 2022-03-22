@@ -20,8 +20,11 @@ describe('divide', function () {
   });
 
   it('divide 10 by 20', () => {
-    const turboNumber = new TurboNumber(10);
-    expect(turboNumber.divide(20).result()).toBe(0.5);
+    expect(new TurboNumber(10).divide(20).subtract(0.5).result()).toBe(0);
+  });
+
+  it('divide 10 by 20', () => {
+    expect(TurboNumber.new(10).divide(5).result()).toBe(2);
   });
 
   it('divide 10 by -20', () => {
@@ -54,5 +57,11 @@ describe('subtract', function () {
     const turboNumber = new TurboNumber(10);
     turboNumber.subtract(-0.5);
     expect(turboNumber.result()).toBe(10.5);
+  });
+
+  it('divide 10 by 0', () => {
+    const turboNumber = new TurboNumber(10);
+    turboNumber.divide(-20);
+    expect(turboNumber.result()).toBe(-0.5);
   });
 });
