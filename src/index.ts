@@ -1,11 +1,12 @@
-export const number = 5;
-
 export class TurboNumber {
   constructor(public number: number) {}
 
-  subtract(x: number) {}
+  divide(x: number) {}
+  subtract(x: number) {
+    this.number -= x;
+  }
 
   result() {
-    return 5;
+    return this.number;
   }
 }
