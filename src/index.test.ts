@@ -2,7 +2,7 @@ class TurboNumber {
   constructor(public number: number) {}
 
   subtract(x: number) {
-    this.number = 0;
+    this.number -= this.number;
   }
 
   result() {
