@@ -5,6 +5,10 @@ class TurboNumber {
     this.number -= x;
   }
 
+  divide(x: number) {
+    this.number /= x;
+  }
+
   result() {
     return this.number;
   }
@@ -15,5 +19,11 @@ describe('TurboNumber', () => {
     const turboNumber = new TurboNumber(5);
     turboNumber.subtract(5);
     expect(turboNumber.result()).toBe(0);
+  });
+
+  it('divide 5 by 5', () => {
+    const turboNumber = new TurboNumber(5);
+    turboNumber.divide(5);
+    expect(turboNumber.result()).toBe(1);
   });
 });
