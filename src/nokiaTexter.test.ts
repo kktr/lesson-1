@@ -2,6 +2,8 @@ class NokiaTexter {
   constructor(public message: string) {}
 
   squeeze() {
+    const shortenedText = this.message.replace(/ /g, '');
+    if (shortenedText === this.message) return this.message;
     return this.message;
   }
 }
