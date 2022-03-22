@@ -9,6 +9,7 @@ class TurboNumber {
   divide(x: number) {
     if (x === 0) throw new Error("can't divide by 0");
     this.number /= x;
+    return this;
   }
 
   result() {
@@ -24,8 +25,7 @@ describe('TurboNumber', () => {
 
   it('divide 10 by 10', () => {
     const turboNumber = new TurboNumber(10);
-    turboNumber.divide(10);
-    expect(turboNumber.result()).toBe(1);
+    expect(turboNumber.divide(10).result()).toBe(1);
   });
 
   it('divide 10 by 0', () => {
