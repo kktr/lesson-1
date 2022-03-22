@@ -1,7 +1,7 @@
 import { TurboNumber } from './index';
 
 describe('subtract', function () {
-  it('subtract 15 from 20 ', () => {
+  it('subtract 15 from 20', () => {
     const turboNumber = new TurboNumber(20);
     turboNumber.subtract(15);
     expect(turboNumber.result()).toBe(5);
@@ -9,9 +9,15 @@ describe('subtract', function () {
 });
 
 describe('divide', function () {
-  it('divide 20 by 20 ', () => {
+  it('divide 20 by 20', () => {
     const turboNumber = new TurboNumber(20);
     turboNumber.divide(20);
     expect(turboNumber.result()).toBe(1);
+  });
+
+  it('handle divide by 0', () => {
+    const turboNumber = new TurboNumber(20);
+    turboNumber.divide(0);
+    expect(turboNumber.result()).toBe(Infinity);
   });
 });
