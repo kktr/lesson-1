@@ -2,7 +2,7 @@ class TurboNumber {
   constructor(public number: number) {}
 
   subtract(x: number) {
-    this.number = 1;
+    this.number -= x;
   }
 
   result() {
@@ -14,6 +14,6 @@ describe('TurboNumber', () => {
   it('subtract 5 from 5', () => {
     const turboNumber = new TurboNumber(5);
     turboNumber.subtract(5);
-    expect(turboNumber.result()).toBe(1);
+    expect(turboNumber.result()).toBe(0);
   });
 });
