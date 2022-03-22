@@ -2,10 +2,6 @@ import { number, TurboNumber, turboNumber } from './index';
 
 let tn: TurboNumber;
 
-beforeEach(() => {
-  tn = new TurboNumber(10);
-});
-
 describe('number', function () {
   it('works', () => {
     expect(number).toBe(5);
@@ -13,6 +9,10 @@ describe('number', function () {
 });
 
 describe('divide', function () {
+  beforeEach(() => {
+    tn = new TurboNumber(10);
+  });
+
   it('divide 10 by 5', () => {
     expect(tn.divide(2).result()).toBe(5);
   });
@@ -21,7 +21,7 @@ describe('divide', function () {
     expect(tn.divide(20).result()).toBe(0.5);
   });
 
-  it('divide 10 by 20', () => {
+  it('divide 10 by 5', () => {
     expect(TurboNumber.new(10).divide(5).result()).toBe(2);
   });
 
@@ -35,6 +35,10 @@ describe('divide', function () {
 });
 
 describe('subtract', function () {
+  beforeEach(() => {
+    tn = new TurboNumber(10);
+  });
+
   it('subtract 2 from 10', () => {
     expect(tn.subtract(2).result()).toBe(8);
   });
