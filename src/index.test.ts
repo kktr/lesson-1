@@ -7,3 +7,11 @@ describe('subtract', function () {
     expect(turboNumber.result()).toBe(5);
   });
 });
+
+describe('divide', function () {
+  it('divide 20 by 20 ', () => {
+    const turboNumber = new TurboNumber(20);
+    turboNumber.divide(20);
+    expect(turboNumber.result()).toBe(1);
+  });
+});
