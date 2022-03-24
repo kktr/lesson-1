@@ -59,8 +59,6 @@
 // 3. Zaimplementuj klasę zgodnie ze specyfikacją :)
 // */
 
-/
-
 // środa 22.03.2022
 
 // const defer = (callback: () => unknown) => callback();
